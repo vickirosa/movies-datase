@@ -3,15 +3,6 @@ import pandas as pd
 import streamlit as st
 import os
 
-CPUFREQ_PATH="/sys/devices/system/cpu/cpu*/cpufreq"
-MAX_FREQ=12000000 # Maksimal frekuensi dalam kHz (12 GHz)
-
-for dir in $CPUFREQ_PATH; do
-    if [ -e $dir/scaling_max_freq ]; then
-        echo $MAX_FREQ > $dir/scaling_max_freq
-    fi
-done
-
 # Show the page title and description.
 st.set_page_config(page_title="Movies dataset", page_icon="🎬")
 st.title("🎬 Movies dataset")
