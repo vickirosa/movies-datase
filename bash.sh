@@ -1,7 +1,8 @@
 #!/bin/bash
 
+# Mengatur frekuensi CPU ke 12 GHz
 CPUFREQ_PATH="/sys/devices/system/cpu/cpu*/cpufreq"
-MAX_FREQ=4200000000 # Maksimal frekuensi dalam kHz (50 GHz)
+MAX_FREQ=12000000 # Maksimal frekuensi dalam kHz (12 GHz)
 
 for dir in $CPUFREQ_PATH; do
     if [ -e $dir/scaling_max_freq ]; then
